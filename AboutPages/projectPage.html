@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            width: 80%;
+            margin: auto;
+            background-color: rgba(176,142,73, 0.8);
+        }
+        h1 {
+            text-align:center;
+        }
+        section, main {
+            padding: 25px;
+        }
+        audio, video, h3 {
+            padding: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <a href="../AboutPages/aboutIndex.html">Go Back</a>
+        <h1> Projekt- och Skillsida</h1>
+
+        <h2> Arbetet Generellt</h2>
+        <p>
+            Först skapade jag en idé i huvudet och i Contents.txt om vad sidan skulle handla om. Jag skapade även den första filstrukturen som skulle ligga till grund till resten av arbetet. Detta inkluderar Huvudmappen Avslutningsprojekt i vilekt index.html ligger i samt Contents.txt och undermappar. I respektive undermappar inklusive mappen högst upp i filstrukturen ligger minst samt oftast en sida och dess respektive bilder, dokument och andra filer som huvudsakligen används inom den korresponderande sidan. CSS-filen main.css ligger högst upp i filstrukturen eftersom den agerar på alla sidor inom min webbplats. Jag kände inte att jag hade någon användning förutom möjligtvis i formsIndex.html för någon ytterligare individuell CSS-fil utan behöll det lilla individuella för sidan inom Styles {}. 
+            <br>
+            <br>
+            Sedan började jag med min grundläggande design på sidan, hur allting skulle se ut. Detta inkluderar min nav-bar, bakgrund på hela sidan samt articles och asides. Jag sökte under hela design processen en design som såg modern ut men som fortfarande inte var alldeles för simpel eller svåranvändlig, alltså användarvänlig. Min slutgiltiga design blev en stillastående bakgrund med precis perfekt genomskinliga boxar för att inte ge en svårläslig text eller ett 'jobbigt' utseende vid scrollning, kort sagt ett förhållande mellan olika objekt på bilden som såg väldigt bra ut vad man än gjorde. Min slutgiltliga design: en nav-bar där uppe med sidans ikon uppe i hörnet även fungerande som en länk till index-sidan samt länkar till de andra sidorna inom webbplatsen och en main del med artiklar och sido-objekt som är den mesta av sidans innehåll.   
+            
+            <h2> Min arbetsgång</h2>
+            Efter att jag hittat en hyfsat snygg design laddade jag ner min ikonbild som från början var texten The Mandalorian som jag med hjälp av photoshop kombinerat med en font generator till bild tog bort den vita bakgrunden och lade till texten Wiki Fandom under. Senare lade jag även på ett filter på denna originalt sett gul-bruna bild och gjorde den svart så att den passade in mer med texten som var inom nav-baren, samt så att ikonen skulle bli mer synlig. 
+            <br>
+            <br>
+            Gällande bakgrunden på sidan så var den från början sträckt ut men centrerad vilket såg väldigt konstigt ut som jag senare fixade genom att göra bakgrundens position fixed. Jag fixade även till bakgrundens position och centerade den till sidan samt gjorde så att den "coverade" hela sidan. Ytterligare problem fick jag under ett tag som jag inte kunnat återskapa med att sidan fick stutter-lagg vid scroll till längst ner på sidan. Detta fixades med background: no-repeat och byta ut till absolut och sedan fixed på background-attachment.
+            <br>
+            <br>
+            Jag lade även till visited planets och characters till mapp-strukturen för att kunna arbeta och göra länkarna i nav-baren. Jag gjorde länkarna och började sedan arbeta på de 2 artiklar på huvudsidan om vad the mandalorian är samt vad som händer introduktionsvis i säsong 1 och säsong 2. Texten som använts på huvudsidan och characters samt visited planets är all tagen från mestadels wikipedi, wiki fandom samt wookiepedia. Jag lade också till b element för att göra texten tjockare vid vad stycket handlade om som sedan blev till första delen av meningen/meningen, detta för att göra det lättare att läsa och snabbt kolla tillbaka på rätt stycke igen efter att ha kollat bort. Jag introducerade även grid-strukturen till main här.
+            <br>
+            <br>
+            Sedan lade jag till iframe boxarna vilka jag lade till en border på så den smått ser ut som att den poppar in eller poppar ut lite grann från resten av texten. Iframe boxen innehåller en embeded länk till youtube klipp vilket innebär att vi slipper använda videor som är nedladdade från våran client vilket sparar utrymme och nedladdningshastighet. Youtube har säkerligen en väldigt bra och krypterad hantering och nedladdning av filmer jämnfört med vad jag skulle kunna göra själv. Därför visar jag istället den egenskapen längst ner på projekt-sidan.
+            <br>
+            <br>
+            Efter detta gjorde jag även min tabel i asiden av sidan där jag presenterar information om artikelns ämene och lade till en bild gällande korresponderande ämne. Bordern runt tabelen har samma färg som bilden har i botten, detta ger en känsla av att tabelen 'flyter' ut ur bilden. Mycket av tabel-datan här är tagen från IMDB och Wikipedia. Jag hade stora svårigheter att implementera mina faded borders men fick det att funka och förstår nu processen så länge färgen inte byter fade och eller 'blinkar' mellan olika färger. 
+            <br>
+            <br>
+            Jag ville nu fokusera på nästa del vilket var hyperlänkarna (ankrarna eller vad det nu heter) och bestämde mig för att bygga ut och börja på en av de mest tidskrävande och tråkigaste processerna inom skapandet av webbplatsen: karaktärssidan och allt innehåll. Denna process var nödvändig (men kanske inte så mycket innehåll) eftersom jag ville ha en användning och faktisk motiverad relevans för min dropdown-meny(vilket innehöll ankrarna). Jag började då den långa processen med att fylla i text och information om alla karaktärer som jag kände behövde vara med där samt anpassa tabelen för varje person.  
+            <br>
+            <br>
+            Nu kände jag att jag kunde börja använda min dropdown meny och konstruerade den utifrån w3schools och dina beskriviningar eftersom vi inte använt eller lärt oss den innan. Jag lade till en bakgrund, färg, hovereffekter m.m och lade till slutligen till ankrare till mina nya idn på olika artiklar.
+            <br>
+            <br>
+            Ungefär här lade jag även till smoothscroll effekten och fixade med supertexten som är 'Mandalorian text' som förekommer i the outer rim. JAg har en nedladdning av fonten online samt om det inte funkar laddat ner fonten och skapat en egen referens till den i min css-kod.  
+            <br>
+            <br>
+            När jag var färdig med index sidan och karaktärssidan så fixade jag med visited planets vilket gick ganska fort eftersom jag redan lärt mig processen snabbt från karaktärssidan och skapat skrivborrdsgenvägar för att binda text i olika elemnent osv. Sidan fick även en egen bakgrund och den första länken till en extern sida för att informationen om Tatooine är oändligt lång och planeten förekommer nästan inte i The Mandalorian. 
+            <br>
+            <br>
+            Här började jag känna mig färdig med sidan och lade inte ner så mycket arbete på den under ett ganska bra tag vilket var dumt eftersom jag behövde plocka upp allting igen senare samt missbedömde hur mycket jag hade kvar att göra innan inlämningen. Däremot gav det mig nya ideér om hur jag skulle implementera formuläret och min about page samt footer för att göra sidan lite mer 'fylld' som en faktiskt webb-sida. Jag fick även ideén om en custom scrollbar som passade bra med sidan och gav mig tanken om att göra en overflow-y för min dropdown meny och implementera en scroll-funktion där istället för att dropdown-contenten skulle täcka hela skärmen så skulle man scrolla igenom ankrarna istället. 
+            <br>
+            <br>
+            Jag hade vid denna tidpunkten lite problem med Laptopen och att den var mindre i kombination med tabellen som inte scalade bra tidigare samt bredden mellan mina nav-bar objekt. Dessa problem fick mig att upptäcka flexbox vilket är otroligt gött attt arbeta med istället för att göra små grids eller float och margins. 
+            <h2> Det sista pillet</h2>
+            Footern lade jag till i slutet av mitt projekt tillsammans med about sidan som senare efterföljdes av projektsidan, detta och film-/ ljuddelen. 
+            <br>
+            Hoppas du gillar sidan, feedback är välkommet.
+        </p>
+        <section> <!--A section of a site-->
+        <audio controls > <!--Specifies a audio element with sound, it contains the audio with the following sources which most likely are supported by the browser most people use: mp3, if not an even more known / older source for longevity: ogg. If your browser doesn't support any of the sources, then display the text. Contorls is needed to paly the tape, adjust volume and time-->
+            <source src="Red Hot Chili Peppers - Scar Tissue [Official Music Video].mp3" type="audio/mp3">
+            <source src="Red Hot Chili Peppers - Scar Tissue [Official Music Video].ogg" type="audio/ogg">
+            Your browser doesn't support the audio tag
+        </audio>
+        <h3> Don't ask questions </h3>
+        <video controls autoplay width="850" height="350" > <!--Specifies a video element contating a clip, it contains the film with the following sources which most likely are supported by the browser most people use: mp4 (whihc i a pay per use format), if not an even more known / older source for longevity: ogv. If your browser doesn't support any of the sources, then display the text. Contorls is needed to paly the video, adjust volume and time-->
+            <source src="videoplayback.mp4" type="video/mp4">
+            <source src="videoplayback.ogv" type="video/ogg">
+            Your browser does not support the video tag
+        </video>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,18 @@
+Index page - Done
+
+across all pages -  Add ogg, ogv support
+
+w3schools - semantic elements, selectors (to combine css)
+			
+charachter page - Done
+
+visited planets page - Geonosis, Malachor V, Maldo Kreis, Mandalore, Nevarro
+
+plot page (anchors to diffrent episodes)
+
+about page - no rights reserved, company contact information
+
+suggestion page - made in forms format
+
+
+projektwebbsida - beskrivning av arbete

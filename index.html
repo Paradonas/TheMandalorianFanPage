@@ -1,0 +1,347 @@
+<!DOCTYPE html> <!-- Makes the document be read as html code-->
+<!--  I use ctrl + shift + p: view:word wrap so I don't have to scroll sideways and make editing easier. Hard to view my code without it -->
+<html lang="en"> <!-- Sets the language to english, useful for text to speech nad other feautures-->
+
+<head> <!-- The head part of the html, specifies data about data-->
+    <!-- Mostly standard values from ! + enter, -->
+    <meta charset="UTF-8"> <!-- According to what system text is going to be displayed/read, ASCII is another-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Makes the code compatible with older browsers-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Sets how to handle scaling introduced in HTML5, scale width with device width and initial zoom = 1 (no zoom) -->
+    <title>The Mandalorian Unofficial Wiki Fandom</title> <!-- Sets the title-->
+    
+    <link rel="stylesheet" href="main.css"> <!-- makes the html code read according to the css code in the choosen file-->
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/mandalorian"> <!-- Loads characters with a stylesheet found online, this is a backup incase the css code in the main isn't read properly-->
+    <style> /* Individual 'Override' code for just this html document*/
+        article {
+            border: none; /*removes the bottom border sepperating articles since I want this page to be viewed as 'one' introductory page*/
+        }
+    </style>
+
+</head> <!-- </ ends openings started with <name>, ended with </name> -->
+<!-- emmet, shortcuts, (crtl ') -> commenta ut -->
+<!--Can't comment everything, that would take all day which the css did. I therefore comment new stuff which i haven't used before and i don't comment similar things across all pages-->
+<body> <!-- The body, or what makes up the core of the code-->
+    <nav id="top"> <!-- Navigation with id=top to be able to do an acnhor to the top of the website, hence the name -->
+        <ol> <!-- Ordered list, doesn't need to be ordered but had a reverse list idea if u hover over it from the beginning-->
+            <li> <!-- First list item, the pageIcon image which links to the index page-->
+                <a href="index.html"> <img src="pageIcon.jpg" alt="The Mandalorian cover, page icon"> </a> <!-- a(link, href specifies destination), img(inside the link to make the whole picture a link)-->
+            </li>
+                <div class="dropdown"> <!--Specifies these next items to be inside a dropdown, which needs to be a div to work correctly-->
+                    <li> <!--More list items like this one follows-->
+                        <a href="characterPages/characterIndex.html"> <!--As well as more links / means next file down, # means goto id with corresponding name and ../move 1 file up in the hierarchical file structure--> 
+                            <text> <!--General text element which together with the css keeps the text inside (sup and p) at the correct position (flexbox)-->
+                                <sup> Characters </sup> <!--Supertext in a 'super'-position above the normal -->
+                                <p> Characters</p> <!--paragraph element which is used for standard text-->
+                            </text>
+                        </a>
+                    </li>
+                        <div class="dropdown-content"> <!--Only shows when you hover over div.dropdown -->
+                            <li> <!--Which contains a lot of list items with anchors to their correct part-->
+                                <a href="characterPages/characterIndex.html#Din"> 
+                                    <p class="dropdown-txt"> Din Djarin </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Grogu"> 
+                                    <p class="dropdown-txt"> Grogu </p> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Greef"> 
+                                    <p class="dropdown-txt"> Greef Karga </p> 
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#The Client">
+                                    <p class="dropdown-txt"> The Client </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Dr. Pershing">
+                                    <p class="dropdown-txt"> Dr. Pershing </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Kuiil">
+                                    <p class="dropdown-txt"> Kuiil      </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#IG-11">
+                                    <p class="dropdown-txt"> IG-11 </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Cara">
+                                    <p class="dropdown-txt"> Cara Dune </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Gideon">
+                                    <p class="dropdown-txt"> Moff Gideon </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Armorer">
+                                    <p class="dropdown-txt"> The Armorer </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Peli">
+                                    <p class="dropdown-txt"> Peli Motto </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Boba">
+                                    <p class="dropdown-txt"> Boba Fett </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Frog">
+                                    <p class="dropdown-txt"> Frog Lady </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Koska">
+                                    <p class="dropdown-txt"> Koska Reeves </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#characterPages/characterIndex.htmlBo-Katan">
+                                    <p class="dropdown-txt"> Bo-Katan Kryze </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="characterPages/characterIndex.html#Fennec">
+                                    <p class="dropdown-txt"> Fennec Shand </p>
+                                </a>
+                            </li>
+                    </div>
+                </div>
+            
+            <div class="dropdown"> <!--CSS wise this counts as another list item (thats how the computer reads it)-->
+                <li>
+                    <a href="visitedPlanets/visitedPlanetsIndex.html"> <!--Looks similiar to previous text-->
+                        <text>
+                            <sup> Visited Planets </sup> 
+                            <p> Visited Planets</p>
+                        </text>
+                    </a>
+                </li>
+                <div class="dropdown-content">
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Arvala-7">
+                            <p class="dropdown-txt"> Arvala-7 </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Maldo Kreis">
+                            <p class="dropdown-txt"> Maldo Kreis </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Nevarro">
+                            <p class="dropdown-txt"> Nevarro </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Sorgan">
+                            <p class="dropdown-txt"> Sorgan </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Trask">
+                            <p class="dropdown-txt"> Trask </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Corvus">
+                            <p class="dropdown-txt"> Corvus </p>
+                        </a>
+                    </li>
+                    <li style="grid-template-columns: 100%; text-align: center;">
+                        <a href="visitedPlanets/visitedPlanetsIndex.html#Tatooine">
+                            <p class="dropdown-txt"> Tatooine </p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+            
+            <div class="dropdown">
+                <li> 
+                    <a href="formsPages/formsIndex.html">
+                        <text>
+                        <sup> Forms </sup> 
+                        <p> Forms </p>
+                        </text>
+                    </a> 
+                </li>
+            </div>
+            
+            <div class="dropdown">
+                <li> 
+                    <a href="AboutPages/aboutIndex.html">
+                        <text>
+                        <sup> About </sup> 
+                        <p> About </p>
+                        </text>
+                    </a> 
+                </li>
+            </div>    
+        </ol> <!--List and-->       
+    </nav> <!-- Navigationbar ends here-->
+    <div class="nav-spacer"> </div> <!-- Mostly for looks to seperate the rest of thee website from the navbar-->
+
+    <main> <!--The main (core) part of the website regarding content or whats avaliable to the user as opposed to code (which is the difference between this and body)-->
+        <article> <!-- An article-->
+                <p> <!-- Normal paragraph text, b-elements are bold text and don't need aditional css -->
+                <b> The Mandalorian is an American space Western television series </b> created by Jon Favreau for the streaming service Disney+. 
+                It is the first live-action series in the Star Wars franchise, beginning five years after the events of Return of the Jedi (1983).
+                It stars Pedro Pascal as the title character, a lone bounty hunter who goes on the run after being hired to retrieve "The Child".
+                <br> <!-- This is a break element creating a new line (a block element for text covering one line inside it's parent: p)-->
+                <br>
+                <b>The Mandalorian is a live-action Star Wars television series developed by Lucasfilm. </b>
+                The series takes place about five years after the events of Star Wars: 
+                Episode VI Return of the Jedi and airs exclusively on the new streaming service by Disney called Disney+ which began on November 12,
+                2019. Jon Favreau is the writer and executive producer of the series. Directors include Dave Filoni, Deborah Chow, Rick Famuyiwa,
+                Bryce Dallas Howard, and Taika Waititi.
+                <br>
+                <br>
+                <b>Season One episodes debuted on Fridays at 08:01 UTC (3:01 AM EST)</b>, 
+                with the exception of the first and seventh episodes of that season. After the first season's conclusion, 
+                an eight-episode behind the scenes series was released starting May 2020, titled Disney Gallery: The Mandalorian. 
+                On October 30 2020, the second season premiered on Disney+. Season Two episodes debuted on Fridays at 08:01 UTC (3:01 AM EST).
+                </p>
+                <!-- ifram - internet frame, a window to the internet with src as the link and width and such specified to make the site laod faster, it allows fullscreen and has a title which is used if the video cant find the link or for blind people and such mostly-->
+                <iframe width="100%" height="500px" allowfullscreen="true"
+                src="https://www.youtube.com/embed/aOC8E8z_ifw" 
+                title="The Mandalorian | Season 1 Official Trailer | Disney+"> 
+                </iframe>
+                <!--Regarding youtube you have to use embed links to make it work, and not just direct links because that would be the whole youtube site which we aren't allowed to use-->
+        </article>
+        <aside> <!-- Aside, which is aside from the article-->
+            <img src="theMandalorianCoverSeasonOne.jpg" alt="The Mandalorian season 1 cover"> <!--Image with an 'alt' if the image doesn't load to explain what is at display-->
+            <table style="border-color: rgb(85,64,45);"> <!--table with a individual css code to make it look like its sunk in to the image-->
+                <th colspan="2"> Season 1</th> <!--table head which covers to columns-->
+                <tr> <!--tablerow-->
+                    <td> Original release date:</td> <!--table data-->
+                    <td> November 12, 2019</td>
+                </tr>
+                <tr>
+                    <td> Episodes:</td>
+                    <td> 8</td>
+                </tr>
+                <tr>
+                    <td> Binge-watch time:</td>
+                    <td> 5 hours 15 minutes</td>
+                </tr>
+                <tr>
+                    <td> Streaming service:</td>
+                    <td> Disney+</td>
+                </tr>
+                <tr>
+                    <td> Producer:</td>
+                    <td> Jon Favreau</td>
+                </tr>
+                <tr>
+                    <td> Writers:</td>
+                    <td> Jon Favreau, Dave Filoni, <br>Rick Famuyiwa</td>
+                </tr>
+                <tr>
+                    <td> Set in year: </td>
+                    <td> 9 ABY (After the Battle of Yavin)</td>
+                </tr>
+                <tr>
+                    <td> Starring: </td>
+                    <td> Pedro Pascal </td>
+                </tr>
+                <tr>
+                    <td> Composer: </td>
+                    <td> Ludwig Göransson</td>
+                </tr>
+            </table>
+        </aside>
+
+        <article>
+            <p>
+                <b>The second season of the American television series The Mandalorian</b> stars Pedro Pascal as the title character, a bounty hunter trying to return "The Child" to his people, the Jedi. 
+                It is part of the Star Wars franchise, set after the events of Return of the Jedi (1983). The season was produced by Lucasfilm, Fairview Entertainment, and Golem Creations, 
+                with Jon Favreau serving as showrunner.
+                <br>
+                <br>
+                <b>Development on a second season of The Mandalorian</b> had begun by July 2019, with Favreau looking to expand the scope of the series and introduce new characters; 
+                several characters from previous Star Wars media appear in the season. Filming took place from October 2019 to March 2020, 
+                finishing days before the COVID-19 pandemic forced film and television productions to shut down. Post-production was completed remotely, 
+                including the recording of composer Ludwig Göransson's score.
+                <br>
+                <br>
+                <b>The eight-episode season premiered on the streaming service Disney+ on October 30, 2020</b>. A third season has been announced yet to be released.
+            </p>
+            <iframe width="100%" height="500px" allowfullscreen="true" 
+             src="https://www.youtube.com/embed/eW7Twd85m2g" 
+             title="The Mandalorian | Season 2 Official Trailer | Disney+">
+            </iframe>
+        </article>
+        <aside>
+            <img src="theMandalorianCoverSeasonTwo.jpg" alt="The Mandalorian cover season 2">
+            <table>
+                        <th colspan="2">Season 2</th>
+                    <tr>
+                        <td> Original release date:</td>
+                        <td> October 30, 2020</td>
+                    </tr>
+                    <tr>
+                        <td> Episodes:</td>
+                        <td> 8</td>
+                    </tr>
+                    <tr>
+                        <td> Binge-watch time:</td>
+                        <td> 5  hours 23 minutes</td>
+                    </tr>
+                    <tr>
+                        <td> Streaming service:</td>
+                        <td> Disney+</td>
+                    </tr>
+                    <tr>
+                        <td> Producer:</td>
+                        <td> Jon Favreau</td>
+                    </tr>
+                    <tr>
+                        <td> Writers:</td>
+                        <td> Jon Favreau, Dave Filoni, <br>Rick Famuyiwa</td>
+                    </tr>
+                    <tr>
+                        <td> Set in year: </td>
+                        <td> 9 ABY (After the Battle of Yavin)</td>
+                    </tr>
+                    <tr>
+                        <td> Starring: </td>
+                        <td> Pedro Pascal </td>
+                    </tr>
+                    <tr>
+                        <td> Composer: </td>
+                        <td> Ludwig Göransson</td>
+                    </tr>
+            </table>
+        </aside>
+        
+    </main>
+
+    <footer> <!--A footer which is at the bottom of foot of the page, usually contains contact information, sources or otherwise-->
+        <p> The videos, images and any media displayed have been personally stolen by Hugo Kjellerstedt.
+            I specify; I do not satisfy any requirments to spread this media.
+            <br>
+            <br>
+            These rights are owned by each medias representing publisher or further owner by purschase or inheritance.
+            If you seek any further information regarding sources- and publisher information I would kindly ask you to leave immediately.
+            <br>
+            <br>  
+            This is not a trusted site and should neither be viewd as one, 
+            nor does the site feature any reliable way of communicating with the developer as the form is fake and the email never gets checked.
+            <br>
+            <br>
+            <a href="AboutPages/aboutIndex.html"> About </a> <!--A link to the about page with normal style so you don't miss that it's a link-->
+        </p>
+    </footer>
+</body>
+</html> 

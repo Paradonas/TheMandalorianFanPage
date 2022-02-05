@@ -1,0 +1,269 @@
+/* CSS displayed in order they are used in the html code. I used precise css selectors to add ease of edit and for you. I write both elements and items meaning the same thing. I use ctrl + shift + p: view:word wrap so I don't have to scroll sideways and make editing easier. Hard to view my code without it*/
+
+html { /* General css code applied to the whole html page*/
+    scroll-behavior: smooth; /* Makes automatic scrolling smooth, for example when clicking a hyperlink or anchor to an id*/
+}
+
+::-webkit-scrollbar { /* Adjusts scrollbar settings, using this removes top and bottom pieces of the nromal scrollbar*/
+    width: 0.4vw; /* Makes the normally ugly scrollbar look have less width*/
+}
+
+::-webkit-scrollbar-track { /* The whole track of the scrollbar, which the thumb scrolls upon*/
+    background-color: rgb(200, 200, 200); /* makes it have a slight smokey color*/
+}
+
+::-webkit-scrollbar-thumb { /* The thumb, the current seeable/viewable height of the complete height of the web site which your current scroll is ar currently */
+    background-color: rgba(0,0,0, 0.5); /* Adds a sligtly transparent black layer on top of the smokey color*/
+}
+
+::-webkit-scrollbar-thumb:hover { /*When hovering over the thumb*/
+    background-color: rgba(0,0,0, 0.7); /* Makes it sligtyl darker*/
+}
+
+@font-face { /* With this you can make your own font, referable to by the name*/
+    font-family: Mandalorian; /* What you want to call your font, how to refer to it*/
+    src: url(mandalor.ttf); /* The url where the font info can be found for usage*/
+} /* Making my "own" font instead of refering to an online css-file improves site loading speed. If the font is not loaded correctly, sometimes scaling on smaller laptops becomes a   problem, this solver that*/
+
+body { /* applied to the body whihc contains all other elements*/
+    background-color:rgba(239,187,129,1); /* If the image doesn't load use this color instead*/
+    background-image: url("mainBackground.jpg"); /* use this image as background image for the whole body, with according url*/
+    background-size:cover; /* Sets the size to the background to cover, scaling it to the proper size*/
+    background-position: center; /* sets the center x position of image as center page position*/
+    background-attachment: fixed; /* sets the backround to not scroll with the rest of the page, fixes it into one place*/
+    background-repeat: no-repeat; /* Sets the background to not repeat*/
+}
+
+nav { /* Top navigation bar */
+    width: 100%; /* Full size of the whole page*/
+    background-color: rgba(176,142,73, 0.8); /* Slightly transparemt background color to make the nav seem on-top of the background*/
+    border-radius: 2.5px; /* Slightly rounded at nav corners*/
+    height: fit-content; /*  height fits content, making it dependent on items inside of it*/
+    padding-top: 10px;
+}
+
+main { /*main part of the page, contains most content*/
+    width: 80%; /* the width dependent on parent element*/
+    margin: auto; /* margin auto to position in the middle of the body element*/
+    padding: 25px; /* Adds slight padding to the inner sides of the main box to make the content feel better placed*/
+    height: fit-content; /* height fits content of all child elements*/
+    border-style: none groove none groove; /* upper, right, bottom, left || adds border to right and left side of main box with groove-style*/
+    border-radius: 2.5px; /* makes the border a small bit rounded regardless of content width or height*/
+    border-color: rgba(255, 255, 255, 0.15); /* make the border slightly white to add an "edge"-feel to the main element*/
+    background-color: rgba(176,142,73, 0.85); /* Slightly transparemt background color to make the main seem on-top of the background*/
+    display: grid; /* Displays the main as a grid to make elements inside of it display correctly dependent of columns and rows*/
+    grid-template-columns: 70% 30%; /* sets the first column of the grid to be 70% of the main size and the second to 30% of the size*/
+    grid-row-gap: 20px; /* adds a gap between each row, rows are added automaticly when 2 elements have filled the columns*/
+}
+
+nav ol div.dropdown li a text { /* in nav, ordered list (which doesn't need to be ordered, if i wanted to add an effect like reverse or something) 
+    ,div with class dropdown, list item, anchor, text  */
+    display: inline-flex; /* makes the text a flexbox, alternative usually used instead of grid for smaller objects which only needs to 
+    wrap a couple of elements (sup, p)*/
+    flex-flow: row wrap; /* makes the flexbox display item in a row and wrap to next row on the end of the text element, to display super text 
+    above paragraph text*/
+}
+
+nav ol div.dropdown li a text p, nav ol div.dropdown li a text sup { /* makes all dropdown content elements which are text elements have following css */
+    display: inline-block; /* display all text elements as inline-blocks to hinder them from overlapping but still being able to be on same line*/
+    color: rgba(0, 0, 0,1); /* sets color of the text*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* sets font of the text, Arial*/ 
+    font-size: 200%; /* sets font-size to be double the size of parent element which is same parent for super and p*/
+    margin-left: 3%; /* adds a slight margin on the left side to add distance between items*/
+    margin-top: 5px; /* makes the margin smaller (why does it have a standard margin?) to make sup and p closer*/
+    width: 110%;  /* Fixes visited planets text wrapping problem*/
+}
+
+nav ol div.dropdown li a text sup { /* changes between p and sup*/
+    font-family: Mandalorian; /* adds another font*/
+    font-size: 120%; /* sets the font smaller to its parent than the p element making it less significant*/
+    margin: 0; /* removes all margins, 0 doesn't need "px" or "%" since it always means 0*/
+}
+
+a { /* removal of small pixel appearing in siteIcon link (color) as well as removal of all link text-decoration */
+    text-decoration: none;
+}
+
+nav ol li a img {   /* pageIcon (topleft) */
+    width: 18%; /* width based on viewport width*/
+    margin-bottom: 20px; /* adds a 20px margin to the bottom of the image to make the nav bar seem proportional to the content*/
+    filter: brightness(0); /* Gör bilden svart */
+}
+
+nav ol li { /* All list items within nav-bar*/
+    display: inline; /* displayed as inline to be on the same line as pageIcon*/
+    vertical-align: -90px; /* higher up to be displayed correctly within the box */ 
+    text-align: center; /* centers the text in the center of parent element*/
+}
+
+nav ol div.dropdown li{ /*for the list items that are inside the dropdown div*/
+    display: block; /* display them as blocks to make them appear on the same line (since it is a list this works a bit diffrently)*/
+}
+
+.dropdown { /*dropdown list, wg. Using css classes instead of complete css selectors is sometimes easier to find and edit when dealing with individual special features such as 
+    dropdowns instead of using repeated div div for example */
+    position: relative; /* makes the position relative to that of it's parent, which makes it stay in place even though it is an inline-block element and gets extra height when
+    the dropdown menu is "released" */
+    display: inline-block; /* displays the dropdown div as an inline-block element to make it able to stay on the same line whilst not overlapping*/
+    margin-bottom: 0; /* removes all margins*/
+    margin-left: 0.5vw; /* adds a margin on the left side 5% of it's parent*/
+}
+
+.dropdown-content { /* the dropdown content, all items within the dropdown menu*/
+    position:absolute; /* makes element not react to that it is inside of the nav-bar, it only cares and is positioned relative to it's single parent ONLY */
+    display: none; /* Don't display tthe dropdown menu*/
+    padding: 0 12px 5px 12px; /*upper, right, down, left || adds padding to make the item appear at a more visualy pleasing place surrounded by the background-color*/
+    height: 250px; /* adapts height to fit amount of elements*/
+    margin-top: -35px; /* positioning of the dropdown-contents menu, makes it appear under the parent element instead of way below it */
+    background-color: rgba(0, 0, 0, 0.9); /* adds a slightly transparent black background*/
+    overflow-y: scroll; /*If the content overflows the parent elements height(y-axis, vertical), then display overflowing content by scrolling*/
+}
+
+.dropdown:nth-child(3) .dropdown-content { /* Third child of it's parent li element is first, then .dropdown then the second .dropdown*/
+    margin-left: 16.5%; /*adds a margin to position the dropdownmenu directly under the visited planets link*/
+}
+
+.dropdown-content li:nth-child(odd) { /*Makes every odd list element have the following padding within the dropdowncontent div*/
+    padding: 0 2px 10px 0; /*adds 2px to the right to make element appear a bit farther from the side of the background*/
+}
+
+.dropdown-content li:nth-child(even) { /*Makes every even list element have the following padding within the dropdowncontent div*/
+    padding: 0 0 10px 2px; /* adds 2px to the left to make element appear a bit farther from the side of the background*/
+}
+
+.dropdown:hover .dropdown-content  { /* If hovering over the dropdown div, make the dropdown-content ahve the following css*/
+    display: grid; /* Displays as grid, make it visible from none and displays content in an easy to manage way*/
+    grid-template-columns: auto auto; /* Display as 2 automatically sized columns, makes content look more concise or compact*/
+    grid-gap: 5px; /* add a gap between each box for better looks*/
+}
+
+p.dropdown-txt {  /* paragraph element with class dropdown-txt*/
+    font-size: 125%;  /* sets the font size scaling with width*/
+    color: rgb(255,255,255); /* white color */
+}
+
+.dropdown:hover .dropdown-content p:hover{ /* changes the color of dropdown-content text:p if hover is active for div:dropdown and p*/
+    color: rgba(255, 255, 255, 0.2); /*a white with 0.2 transparency making it less white from the original value completely white*/
+}
+
+div.nav-spacer { /* Grey bar seperating nav / main page */
+    background-color: rgba(176,142,73, 0.2); 
+    height: 5px;
+    margin-bottom: 15px; /*adds distance between elements*/
+    border-radius: 15px; /*slight curve to the border*/
+    width: 100%;
+}
+
+/*img.vibbl { //removed for load times, originally image beside main
+    float:left;
+}*/
+
+article { /* positions article on left hand side */
+    width: 90%; /*sets width to 90% of parent element to make it seem inside it and not at the edges of the parent element*/
+    margin: 0px auto 0px auto; /* auto margins, but removes margins at the top and bottom to make it look like an actual article and not placed in the middle of the row*/
+    border-bottom-style:solid; /* solid border at the bottom only, dont want double borders form top and bottom*/
+    border-color: rgba(0, 0, 0, 0.2); /* transparent color same as other aside border color*/
+}
+
+article p, footer p, i, dd { /* Changes text design for the articles footer paragraph text */
+    font-family: Arial, Helvetica, sans-serif; /*Changes font: Arial*/
+    color: rgb(0,0,0); /* text color*/
+    margin-left: 0.7%; /*sligt margin left to center text*/
+}
+
+h2 { /* The white text under characterPages --> Grogu*/
+    text-shadow: 0px 0px 10px rgba(255,255,255 , 0.8); /*positions along x value: 0, positions along y value: 0, blur: 10px, glow. Makes a text shadow that looks like glow, high transparency makes text look too bright*/
+    font-size: 50px; /* The holy text of Grogu shall forever remain big, regardless of width or height*/
+    font-family: Arial, Helvetica, sans-serif; /*Arial font*/
+    color: rgb(255, 255, 255); /*Blends in with the same colored glow effect*/
+    text-align: center; /*aligns x-value to center of parent element*/
+    margin-top: 10%; /*align y-through margins, this pissess me of, why do commands like vertical-align not work properly sometimes, it it because the parent is span maybe, and for some reason span doesn't fill up the whole space avaliable like every single other element you create do do automatically*/
+}
+
+h3 { /* This is the formsPage submitted text Redirecting...*/
+    color: rgb(255,255,255);
+    text-align: center; 
+    vertical-align: 100vh; /*vh = viewport height, works with: <meta name="viewport" content="width=device-width, initial-scale=1.0"> in the html codes*/
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*franklin gothic medium font*/
+    font-size: 50px; /*set font size to a set value: 50px*/
+}
+
+iframe { /* internet frame "window to the internet"*/
+    border-color: rgba( 0, 0, 0, 0.4); /* Sligtly transparent bordder on the outside of the iframe video element*/
+    border-radius: 5px; /* SLight curcve on the border*/
+    display: block; /* Displays as a block to take up the whole left grid row*/
+    margin: 5% 0 0 0; /*Adds an upper margin of 5%. 0 doesn't need to be defined since it's always zero on the right, bottom and left. */
+}
+
+aside { /* Adds a border to the aside element*/
+    width: 100%;
+    height: fit-content; 
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgba(0,0,0,0.4);
+}
+
+aside img {
+    display: block;
+    width: 80%; /* Same width as the table*/
+    margin: 15px auto 2.5px auto; /* top right bottom left */
+    border-radius: 8px;
+}
+
+aside table { /* Changes text design for sidebar(aside) (table heads)*/
+    /* display: grid; */
+    margin: -15px auto 12.5px auto; /* top right bottom left, -15px for border "appearing out of image" style combined with padding. Makes the border begin inside the image*/
+    padding-top: 10px; /* Makes the content appear correctly despite the border according to the box-model*/
+    width: 80%; /*Same width as img, don't know why this doesn't scale correctly regarding of screen width*/
+    height: 40vh; /*40 viewport height, 40% of the height of the viewport (screen or parent element) only way to name height in percent of parent*/
+    border-style: solid;
+    border-color: rgb(0,0,50);
+    border-radius: inherit;
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow-x: auto; */ /* This should fix the problem but doesn't, instead I had to make the main have a greater width*/ 
+}
+
+aside th, td { /*only the th for the aside, but all the td (even the ones on the about page)*/
+    border-radius: 2px;
+    text-align: center;
+}
+
+aside tr:nth-child(even) { /* every even child of parent(table) slightly black background */
+    background-color: rgba(0,0,0,0.3);
+}
+
+aside tr:nth-child(odd) {
+    background-color: rgb(200, 200, 200, 0.4); /* every odd child of parent(table) slightly grey background */
+}
+
+button { /* the button element*/
+    position: fixed; /*Fixes the position of the button to always make it stay in the same place*/
+    bottom: 40vh; /*40% of the viewport height, 40% also works here even though it is height for some reason*/
+    right: 3vw; /*3% of viewport width to make it scale better with smaller screens*/
+    border: none; /* removes the standard border of a button*/
+    height: 100px; 
+    width: 50px;
+    background-color: rgba(176,142,73, 0.4);
+    border-radius: 40px; /*curves the div*/
+    font-size: 16px; /*sets the text size*/
+}
+
+button a { /*changes the link in the button element*/
+    color: rgb(0, 0, 0); /* for making the text black*/
+}
+
+footer { /*the footer at the bottom of the site*/
+    width: 80%; /* widht same as main*/
+    margin: 25px auto 0 auto; /* 25px margin to the main, the element over it, auto 0 (no border to the bottom) auto (the autos are for centering the footer to the center of the screen)*/
+    padding: 25px; /*makes the content inside the element not be at the edges to make it look better*/
+    height: fit-content; /* sets the height to fit the content*/
+    border-style: none groove none groove; /* upper, right, bottom, left || adds border to right and left side of main box with groove-style*/
+    border-radius: 2.5px;
+    border-color: rgba(255, 255, 255, 0.2); /* make the border slightly white to add an "edge"-feel to the main element*/
+    background-color: rgba(176,142,73, 0.85); /*  Slightly transparemt background color to make the main seem on-top of the background**/
+    text-align: center; /*centers the text along the x-axis*/
+}
+
+
+
+

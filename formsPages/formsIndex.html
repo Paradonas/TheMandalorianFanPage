@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms - Feedback</title>
+
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="http://fonts.cdnfonts.com/css/mandalorian">
+
+    <style>  /* Contains individual css-code for this site regarding the tables*/
+        main {
+            grid-template-columns: auto !important; /*Again override of the previous css code*/
+            grid-row-gap: 0 !important;
+        }
+
+        td:nth-child(1) { /*On the first child of its parent for every td element*/
+            text-decoration: underline; /*Adds an underline to make it stand out more*/
+            font-size: 20px; /*Also makes the text a diffrent size, this is not needed on the other element since they contain inputs*/
+            font-family: 'Arial', sans-serif;
+        }
+
+        td:nth-child(2) { /*On the second child of its parent for every td element*/
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ol>
+            <li>
+                <a href="..\index.html"> <img src="..\pageIcon.jpg" alt="The Mandalorian cover, page icon"> </a>
+            </li>
+            <div class="dropdown">
+                <li>
+                    <a href="../characterPages/characterIndex.html">
+                       <text>
+                                <sup> Characters </sup> 
+                                <p> Characters</p>
+                        </text>
+                    </a>
+                </li>
+                <div class="dropdown-content">
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Din">
+                            <p class="dropdown-txt"> Din Djarin </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Grogu">
+                            <p class="dropdown-txt"> Grogu </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Greef">
+                            <p class="dropdown-txt"> Greef Karga </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#The Client">
+                            <p class="dropdown-txt"> The Client </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Dr. Pershing">
+                            <p class="dropdown-txt"> Dr. Pershing </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Kuiil">
+                            <p class="dropdown-txt"> Kuiil </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#IG-11">
+                            <p class="dropdown-txt"> IG-11 </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Cara">
+                            <p class="dropdown-txt"> Cara Dune </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Gideon">
+                            <p class="dropdown-txt"> Moff Gideon </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Armorer">
+                            <p class="dropdown-txt"> The Armorer </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Peli">
+                            <p class="dropdown-txt"> Peli Motto </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Boba">
+                            <p class="dropdown-txt"> Boba Fett </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Frog">
+                            <p class="dropdown-txt"> Frog Lady </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Koska">
+                            <p class="dropdown-txt"> Koska Reeves </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Bo-Katan">
+                            <p class="dropdown-txt"> Bo-Katan Kryze </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../characterPages/characterIndex.html#Fennec">
+                            <p class="dropdown-txt"> Fennec Shand </p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <li style="width: 104%;">
+                    <a href="../visitedPlanets/visitedPlanetsIndex.html">
+                        <text>
+                            <sup> Visited Planets </sup> 
+                            <p> Visited Planets</p>
+                        </text>
+                    </a>
+                </li>
+                <div class="dropdown-content">
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Arvala-7">
+                            <p class="dropdown-txt"> Arvala-7 </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Maldo Kreis">
+                            <p class="dropdown-txt"> Maldo Kreis </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Nevarro">
+                            <p class="dropdown-txt"> Nevarro </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Sorgan">
+                            <p class="dropdown-txt"> Sorgan </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Trask">
+                            <p class="dropdown-txt"> Trask </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Corvus">
+                            <p class="dropdown-txt"> Corvus </p>
+                        </a>
+                    </li>
+                    <li style="grid-template-columns: 100%; text-align: center;">
+                        <a href="../visitedPlanets/visitedPlanetsIndex.html#Tatooine">
+                            <p class="dropdown-txt"> Tatooine </p>
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+        <div class="dropdown">
+            <li> 
+                <a href="../formsPages/formsIndex.html"> 
+                    <text>
+                        <sup> Forms </sup> 
+                        <p> Forms </p>
+                    </text>
+                </a> 
+            </li>
+        </div>
+        
+        <div class="dropdown">
+            <li> 
+                <a href="../AboutPages/aboutIndex.html"> 
+                    <text>
+                        <sup> About </sup> 
+                        <p> About </p>
+                    </text>
+                </a> 
+            </li>
+        </div> 
+
+        </ol>
+    </nav>
+    <div class="nav-spacer"> </div>
+    <main>
+        <table> <!--A table containg the form displayed across diffrent table rows for ease of spefcifying in CSS-->
+            <form action="formResults.html" method="POST"> <!--Specifies that this is a form. ACtion tells the data where to be submitted to and method how, the how is a POST which means the data will simply be put into the url. GET is used for storing the data which we haven't learned yet and would take to much time to learn, we weren't supposed to use things we didn't know hot to do, but still we haven't actually 'learnt' forms in class and it is a requirement for an A. This makes it a slight bit confusing to know wheter I should have done something to store the data which isn't needed for the form so i just didn't store it which also defeates the purpose of a form...-->
+                <tr> <!-- Label and input works together, input is where you input your data as the specified type of data, the suer know what to input because of the placeholder or text there already and this data gets input into the corresponding id as the label with the same name as 'for'. Name is used for other features such as for reading the screens content out loud-->
+                    <td><label for="fname" > Name:</label></td>
+                    <td><input name="fnamne" type="text" placeholder="enter Name"  id="fname"></td>
+                </tr>
+                <tr>
+                    <td><label for="lname" > Last Name: </label></td>
+                    <td><input  name="lname" type="text" placeholder="enter Last Name"  id="lname"></td>
+                </tr>
+                <tr> <!--A number means that you cant input anything but a number, which is specified by the mini- and maximum values.-->
+                    <td><label for="age"> Age: </label></td>
+                    <td> <input style="width: 169px;"  name="age" type="number" placeholder="1-200" min="1" max="200" id="age"> </td>
+                </tr> <!--The width is for some reason needed in some elemetnts because the width scales weirdly for some input types-->
+                <tr>
+                    <td colspan="2"> <label for="gender"> Gender: </label> </td>
+                </tr>
+                <tr> <!--A radio element you can is like a boolean yes or no, but only one of the radio elements with the same name can have a 1 or a yes-->
+                    <td><label for="male"> Male: </label></td>
+                    <td> <input name="gender" type="radio" id="male"> </td>
+                </tr>
+                <tr>
+                    <td><label for="female"> Female: </label></td>
+                    <td> <input name="gender" type="radio" id="female"> </td>
+                </tr>
+                <tr> <!--The type: date is another built in feature for entering dates-->
+                    <td><label for="date"> Date Submited: </label></td>
+                    <td> <input style="width: 171px;" name="date" type="date"  id="date"> </td>
+                </tr>
+                <tr>
+                    <td><label for="desimp" > Desired Improvement: </label></td>
+                    <td><input  name="desimp" type="text" placeholder="enter Desired Improvement"  id="desimp"></td>
+                </tr>
+                <tr>
+                    <td><label for="feedback"> Feedback: </label></td>
+                    <td><input  name="feedback" type="text" placeholder="enter Feedback"  id="feedback"></td>
+                </tr>
+                <tr> <!--type email only allows text that could be an email, required means the user has to enter something to the field to submit-->
+                    <td> <label for="email"> Email: </label></td>
+                    <td><input  name="email" type="email" placeholder="enter Email"  id="email" required></td>
+                </tr>
+                <tr> <!--This element contains two inputs to position them next to each other and alos removes the underline since it is the first element of it's parent table row. Input type rest resets the whole form to the original values and submit submits the form to theaction url ´. Value is instead of a placeholder which jsut acts as normal static text.-->
+                    <td colspan="2" style="text-decoration: none;"><input type="reset" value="Reset"> <input type="submit" value="Submit"></td>
+                </tr>
+            </form>
+        </table>
+    </main>
+    
+    <footer>
+        <p> The videos, images and any media displayed have been personally stolen by Hugo Kjellerstedt.
+            I specify; I do not satisfy any requirments to spread this media.
+            <br>
+            <br>
+            These rights are owned by each medias representing publisher or further owner by purschase or inheritance.
+            If you seek any further information regarding sources- and publisher information I would kindly ask you to leave immediately.
+            <br>
+            <br>  
+            This is not a trusted site and should neither be viewd as one, 
+            nor does the site feature any reliable way of communicating with the developer as the form is fake and the email never gets checked.
+            <br>
+            <br>
+            <a href="../AboutPages/aboutIndex.html"> About </a>
+        </p>
+    </footer>
+</body>
+</html>
